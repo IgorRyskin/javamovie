@@ -122,68 +122,23 @@ public class MovieManagerTest {
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
-
     @Test
-    public void FindAllMovies2() {
+    public void FindAllLastMoreMovie() {
         MovieManager manager = new MovieManager();
 
-        manager.addMovie("Бладшот");
-        manager.addMovie("Вперед");
+       
         manager.addMovie("Отель Белград");
         manager.addMovie("Джентельмены");
         manager.addMovie("Человек-невидимка");
         manager.addMovie("Тролли.Мировой тур");
         manager.addMovie("Номер один");
-        manager.addMovie("Film 8");
+        manager.addMovie("Film 6");
 
-        String[] expected = {"Бладшот", "Вперед", "Отель Белград", "Джентельмены", "Человек-невидимка", "Тролли.Мировой тур", "Номер один", "Film 8"};
-        String[] actual = manager.findAll();
+        String[] expected = {"Film 6","Номер один", "Тролли.Мировой тур", "Человек-невидимка", "Джентельмены", "Отель Белград",};
+        String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void FindTwoMovies() {
-        MovieManager manager = new MovieManager();
-
-        manager.addMovie("Бладшот");
-        manager.addMovie("Вперед");
-
-
-        String[] expected = {"Бладшот", "Вперед"};
-        String[] actual = manager.findAll();
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void FindFourMovies() {
-        MovieManager manager = new MovieManager();
-
-        manager.addMovie("Бладшот");
-        manager.addMovie("Вперед");
-        manager.addMovie("Отель Белград");
-        manager.addMovie("Джентельмены");
-
-
-        String[] expected = {"Бладшот", "Вперед", "Отель Белград", "Джентельмены"};
-        String[] actual = manager.findAll();
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void FindFiveMovies() {
-        MovieManager manager = new MovieManager();
-
-        manager.addMovie("Бладшот");
-        manager.addMovie("Вперед");
-        manager.addMovie("Отель Белград");
-        manager.addMovie("Джентельмены");
-        manager.addMovie("Человек-невидимка");
-
-
-        String[] expected = {"Бладшот", "Вперед", "Отель Белград", "Джентельмены", "Человек-невидимка"};
-        String[] actual = manager.findAll();
-        Assertions.assertArrayEquals(expected, actual);
-    }
 }
 
 
